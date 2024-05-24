@@ -298,4 +298,8 @@ _id,index,dataEMD,nome/primeiro,nome/último,idade,género,morada,modalidade,clu
 6045087fd4df86ffc49b1f78,96,2020-03-14,Chrystal,Poole,28,M,Thynedale,BTT,ACDRcrespos,chrystal.poole@acdrcrespos.me,false,true
 6045087f2b77da1b5332031d,97,2019-10-19,Joanne,Wise,21,F,Gerber,Triatlo,ABCbraga,joanne.wise@abcbraga.org,true,false
 6045087f4aaa6f9a5b10a4ec,98,2021-02-15,Douglas,Gay,29,F,Lowgap,Atletismo,GDGoma,douglas.gay@gdgoma.net,true,true
+<<<<<<< HEAD
 6045087f9ee16ad68be9a413,99,2021-01-13,Glenn,Best,27,M,Graball,BTT,AVCfamalicão,glenn.best@avcfamalicão.ca,true,true
+=======
+6045087f9ee16ad68be9a413,99,2021-01-13,Glenn,Best,27,M,Graball,BTT,AVCfamalicão,glenn.best@avcfamalicão.ca,true,true
+>>>>>>> 5db30980496006115c78eecdb8b173aad5e0ed3f

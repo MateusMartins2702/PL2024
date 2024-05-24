@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 data_dict = {} # (column , atleta_id) -> data
 
 file = open("emd.csv", "r")
+=======
+data_dict = {} # (column , atleta_id) -> data Cria um dicionário vazio chamado data_dict, onde as chaves serão tuplas (column, atleta_id) e os valores serão os dados associados.
+
+file = open ("emd.csv", "r")
+>>>>>>> 5db30980496006115c78eecdb8b173aad5e0ed3f
 
 header = file.readline().rstrip('\n')
 column_names = header.split(",")
 
+<<<<<<< HEAD
 for line in file:
     data = line.rstrip('\n').split(",")
     if (len(data) != len(column_names)):
@@ -31,6 +38,34 @@ for (column, atleta_id) in data_dict:
             inaptos += 1
 percentagem_aptos = aptos / (aptos + inaptos) * 100
 percentagem_inaptos = inaptos / (aptos + inaptos) * 100
+=======
+for line in file :
+    data = line.rstrip('\n').split(",")
+    if(len(data) != len(column_names)) :
+        print("Invalid line : " + line )
+        continue
+    for i in range (len(data)) :
+        data_dict[(column_names[i],data[0])] = data[i]
+        
+file.close()
+
+modalidades = set()
+for (column, atleta_id) in data_dict :
+    if column == "modalidade" :
+        modalidades.add(data_dict[(column,atleta_id)])
+modalidades=sorted(modalidades)
+
+aptos = 0;
+inaptos = 0;
+for(column,atleta_id) in data_dict :
+    if column == "resultado":
+        if data_dict[(column,atleta_id)] == "true":
+            aptos +=1
+        else:
+            inaptos +=1
+percentagem_aptos= aptos /(aptos + inaptos) * 100
+percentagem_inaptos= inaptos /(aptos + inaptos) * 100
+>>>>>>> 5db30980496006115c78eecdb8b173aad5e0ed3f
 
 escaloes = {} # escalão -> lista de atletas
 for (column, atleta_id) in data_dict:
@@ -58,6 +93,7 @@ for escalao in sorted(escaloes):
 
 print("Modalidades: " + ", ".join(modalidades))
 print()
+<<<<<<< HEAD
 print("Aptos: " + str(aptos) + " (" + str(percentagem_aptos) + "%)")
 print()
 print("Inaptos: " + str(inaptos) + " (" + str(percentagem_inaptos) + "%)")
@@ -71,3 +107,6 @@ file.write("\n")
 file.write("Inaptos: " + str(inaptos) + " (" + str(percentagem_inaptos) + "%)\n")
 
 print("Resultados guardados no ficheiro 'resultados.txt'")
+=======
+print("Aptos: " + str(aptos) + " (" + str(percentagem_aptos) + "%)")
+>>>>>>> 5db30980496006115c78eecdb8b173aad5e0ed3f
